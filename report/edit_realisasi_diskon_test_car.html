@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/report/stylesheet/css/style.css/main.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--important for liferay-->
+    <link rel="stylesheet"href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+<section>
+    <div class="custom-d-flex custom-justify-content-center">
+        <div>
+            <h2 class="text-center">kelola Realisasi Diskon Test Car</h2>
+        </div>
+        <div class="custom-margin-left-lg custom-margin-left-lg">
+            <h2 class="text-primary">Edit Realisasi Diskon Test Car</h2>
+        </div>
+    </div>
+    <div class="custom-margin-bottom-md"></div>
+    <!--form -->
+    <form class="custom-width-50 custom-to-center custom-margin-top-lg">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Kode Dealer<span class="mandatory"></span></label>
+          <input class="form-control" aria-describedby="emailHelp" placeholder="Code Dealer">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Periode Faktur<span class="mandatory"></span></label>
+          <input class="form-control" placeholder="Periode Faktur">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">File Report<span class="mandatory"></span></label>
+            <div class="custom-input-border">
+                <div class="custom-pilih-file btn-primary custom-width-15 custom-text-white__size">
+                    Pilih File Input
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Simpan</button>
+        <button type="submit" class="btn btn-secondary">Batal</button>
+      </form>
+    <script>
+        $(document).ready(function() {
+            $('.datepicker').datepicker( {
+                format: 'mm/dd/yyyy',
+                startDate: '-3d'
+            });
+        });
+    </script>
+    
+</section>
+</body>
+</html>
