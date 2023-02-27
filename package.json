@@ -8,6 +8,7 @@
     "node-sass": "^8.0.0"
   },
   "scripts": {
-    "sass-report": "node-sass -w report/stylesheet/scss/main.scss -o report/stylesheet"
+    "compile:sass-bak": "node-sass -w report/stylesheet/scss/main.scss -o report/stylesheet",
+    "compile:sass" : "node-sass -w report-v2/stylesheet/scss/application/application.scss -o report-v2/stylesheet"
   }
 }
