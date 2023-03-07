@@ -373,7 +373,7 @@
     
             
     
-        </style> <script type="text/javascript">
+    </style> <script type="text/javascript">
     // <![CDATA[
     Liferay.Loader.require('frontend-js-spa-web/liferay/init.es', function(frontendJsSpaWebLiferayInitEs) {
     (function(){
@@ -486,67 +486,229 @@
     </script> <style></style><style></style>
 </head>
 <body>
-    <body>
-        <div id="wrapper">
-            <header class="container" id="banner" role="banner">
-                <div class="cx-head">
-                    <div class="col-sm-3">
-                        <div class="head-left">
-                                <img src="${images_folder}/logo_dewa.png" alt="${logo_description}" class="img-rounded" style="margin-top: 10px;height:40px;width: auto;">
-                                 <button aria-controls="navigation" aria-expanded="false" class="collapsed navbar-toggle mob-ico-pos" data-target="#navigationCollapse" data-toggle="collapse" type="button">
-                                     <span class="icon-bar"></span>
-                                     <span class="icon-bar"></span>
-                                     <span class="icon-bar"></span>
-                                 </button>
-                        </div>
+    <div id="wrapper">
+        <header class="container-fluid" id="banner" role="banner">
+            <div class="cx-head">
+                <div class="col-sm-3">
+                    <div class="head-left">
+                            <img src="${images_folder}/logo_dewa.png" alt="${logo_description}" class="img-rounded" style="margin-top: 10px;height:40px;width: auto;">
+                             <button aria-controls="navigation" aria-expanded="false" class="collapsed navbar-toggle mob-ico-pos" data-target="#navigationCollapse" data-toggle="collapse" type="button">
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                             </button>
                     </div>
-                    <div class="col-sm-9 text-right cxrus-iconic">
-                        <div class="des-head">
-                            <img src="${images_folder}/logo_dewa_kanan.jpeg" alt="Dewa Logo" class="img-rounded" style="height:50px;width:auto;margin:0;padding:0;">
-                            <div class="dropdown">
-                                <button class="btn btn-txthead dropdown-toggle" style="border-right:0" type="button" data-toggle="dropdown">
-                                    <span><img src="${images_folder}/icon/user-black.png" class="ico-head"></span>
-                                     <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="/c/portal/logout">Logout</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mob-head">
-                            <div class="btn-group btn-group-justified">
-                                <div class="btn-group">
-                                    <a href="/group/guest/personal-info">
-                                        <button class="btn btn-mobile" type="button"></button>
-                                    </a>
-                                </div>
-                                <div class="btn-group">
-                                    <a href="${logout_url}">
-                                        <button class="btn btn-mobile" type="button"></button>
-                                    </a>
-                                </div>
-                            </div>
+                </div>
+                <div class="col-sm-9 text-right cxrus-iconic">
+                    <div class="des-head">
+                        <img src="${images_folder}/logo_dewa_kanan.jpeg" alt="Dewa Logo" class="img-rounded" style="height:50px;width:auto;margin:0;padding:0;">
+                        <div class="dropdown">
+                            <button class="btn btn-txthead dropdown-toggle" style="border-right:0" type="button" data-toggle="dropdown">
+                                <span><img src="${images_folder}/icon/user-black.png" class="ico-head"></span>
+                                 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="/c/portal/logout">Logout</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-    
-                <div>
-                    <ul class="ct-navbar col-sm-12">
-                            <li><a class="ct-list-item" href="#" id="home">Home<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>  
-                            <li><a class="ct-list-item" href="#" id="report">Report<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
-                            <li><a class="ct-list-item" href="#" id="download">Download<i class="fa-solid fa-chevron-down ct-margin-left-sm" style="color: white;"></i></a></li>
-                            <li><a class="ct-list-item" href="#" id="upload">Upload<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
-                            <li><a class="ct-list-item" href="#" id="training">Training<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
-                            <li><a class="ct-list-item" href="#" id="event">Calendar Event<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
-                    </ul> 
-                </div>  
-                <!-- <div class="side-blue-navbar">test</div>   -->
-            </header>
+            </div>
+
+            <div>
+                <ul class="ct-navbar col-sm-12">
+                        <li class="ct-li"><a class="ct-list-item" href="#" id="home">Home<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>  
+                        <li class="ct-li"><a class="ct-list-item" href="#" id="report">Report<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
+                        <li class="ct-li"><a class="ct-list-item" href="#" id="download">Download<i class="fa-solid fa-chevron-down ct-margin-left-sm" style="color: white;"></i></a></li>
+                        <li class="ct-li"><a class="ct-list-item" href="#" id="upload">Upload<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
+                        <li class="ct-li"><a class="ct-list-item" href="#" id="training">Training<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
+                        <li class="ct-li"><a class="ct-list-item" href="#" id="event">Calendar Event<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
+                </ul> 
+            </div>  
+            <!-- <div class="side-blue-navbar">test</div>   -->
+        </header>
+
+         <!-- carousel -->
+         <div class="container-fluid">
+            <div class="ct-carousel">
+              <ul class="ct-slides">
+                <input type="radio" name="radio-buttons" id="img-1" checked />
+                <li class="ct-slide-container">
+                  <div class="ct-slide-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Timisoara_-_Regional_Business_Centre.jpg">
+                  </div>
+                  <div class="ct-carousel-controls">
+                    <label for="img-3" class="ct-prev-slide">
+                      <span><i class="fa fa-angle-left fa-2x"></i></span>
+                    </label>
+                    <label for="img-2" class="ct-next-slide">
+                      <span><i class="fa fa-angle-right fa-2x"></i></span>
+                    </label>
+                  </div>
+                </li>
+                <input type="radio" name="radio-buttons" id="img-2" />
+                <li class="ct-slide-container">
+                  <div class="ct-slide-image">
+                    <img src="https://content.r9cdn.net/rimg/dimg/db/02/06b291e8-city-14912-171317ad83a.jpg?width=1750&height=1000&xhint=3040&yhint=2553&crop=true">
+                  </div>
+                  <div class="ct-carousel-controls">
+                    <label for="img-1" class="ct-prev-slide">
+                        <span><i class="fa fa-angle-left fa-2x"></i></span>
+                    </label>
+                    <label for="img-3" class="ct-next-slide">
+                        <span><i class="fa fa-angle-right fa-2x"></i></span>
+                    </label>
+                  </div>
+                </li>
+                <input type="radio" name="radio-buttons" id="img-3" />
+                <li class="ct-slide-container">
+                  <div class="ct-slide-image">
+                    <img src="https://speakzeasy.files.wordpress.com/2015/05/twa_blogpic_timisoara-4415.jpg">
+                  </div>
+                  <div class="ct-carousel-controls">
+                    <label for="img-2" class="ct-prev-slide">
+                        <span><i class="fa fa-angle-left fa-2x"></i></span>
+                    </label>
+                    <label for="img-1" class="ct-next-slide">
+                        <span><i class="fa fa-angle-right fa-2x"></i></span>
+                    </label>
+                  </div>
+                </li>
+                <div class="ct-carousel-dots">
+                  <label for="img-1" class="ct-carousel-dot" id="img-dot-1"></label>
+                  <label for="img-2" class="ct-carousel-dot" id="img-dot-2"></label>
+                  <label for="img-3" class="ct-carousel-dot" id="img-dot-3"></label>
+                </div>
+              </ul>
+            </div>
+          </div>
+        <!-- end carousel -->
+
+        <!-- Agenda -->
+        <h1 class="ct-text-center ct-color-seaside-blue ct-font-weight-200">Agenda</h1>
+
+        <!--event-->
+        <div class="row container-fluid">
+            <div class="col-md-3">
+              <div class="row space-16">&nbsp;</div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="thumbnail">
+                    <div class="caption text-center" onclick="location.href='https://flow.microsoft.com/en-us/connectors/shared_slack/slack/'">
+                      <div class="position-relative">
+                        <img src="https://az818438.vo.msecnd.net/icons/slack.png" style="width:72px;height:72px;" />
+                      </div>
+                      <h4 id="thumbnail-label"><a href="https://flow.microsoft.com/en-us/connectors/shared_slack/slack/" target="_blank">Microsoft Slack</a></h4>
+                      <p><i class="glyphicon glyphicon-user light-red lighter bigger-120"></i>&nbsp;Auditor</p>
+                      <div class="thumbnail-description smaller">Slack is a team communication tool, that brings together all of your team communications in one place, instantly searchable and available wherever you go.</div>
+                    </div>
+                    <div class="caption card-footer text-center">
+                      <ul class="list-inline">
+                        <li><i class="people lighter"></i>&nbsp;7 Active Users</li>
+                        <li></li>
+                        <li><i class="glyphicon glyphicon-envelope lighter"></i><a href="#">&nbsp;Help</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">&nbsp;</div>
+            </div>
+            <div class="col-md-3">
+                <div class="row space-16">&nbsp;</div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="thumbnail">
+                      <div class="caption text-center" onclick="location.href='https://flow.microsoft.com/en-us/connectors/shared_slack/slack/'">
+                        <div class="position-relative">
+                          <img src="https://az818438.vo.msecnd.net/icons/slack.png" style="width:72px;height:72px;" />
+                        </div>
+                        <h4 id="thumbnail-label"><a href="https://flow.microsoft.com/en-us/connectors/shared_slack/slack/" target="_blank">Microsoft Slack</a></h4>
+                        <p><i class="glyphicon glyphicon-user light-red lighter bigger-120"></i>&nbsp;Auditor</p>
+                        <div class="thumbnail-description smaller">Slack is a team communication tool, that brings together all of your team communications in one place, instantly searchable and available wherever you go.</div>
+                      </div>
+                      <div class="caption card-footer text-center">
+                        <ul class="list-inline">
+                          <li><i class="people lighter"></i>&nbsp;7 Active Users</li>
+                          <li></li>
+                          <li><i class="glyphicon glyphicon-envelope lighter"></i><a href="#">&nbsp;Help</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">&nbsp;</div>
+            </div>
+            <div class="col-md-3">
+                <div class="row space-16">&nbsp;</div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="thumbnail">
+                      <div class="caption text-center" onclick="location.href='https://flow.microsoft.com/en-us/connectors/shared_slack/slack/'">
+                        <div class="position-relative">
+                          <img src="https://az818438.vo.msecnd.net/icons/slack.png" style="width:72px;height:72px;" />
+                        </div>
+                        <h4 id="thumbnail-label"><a href="https://flow.microsoft.com/en-us/connectors/shared_slack/slack/" target="_blank">Microsoft Slack</a></h4>
+                        <p><i class="glyphicon glyphicon-user light-red lighter bigger-120"></i>&nbsp;Auditor</p>
+                        <div class="thumbnail-description smaller">Slack is a team communication tool, that brings together all of your team communications in one place, instantly searchable and available wherever you go.</div>
+                      </div>
+                      <div class="caption card-footer text-center">
+                        <ul class="list-inline">
+                          <li><i class="people lighter"></i>&nbsp;7 Active Users</li>
+                          <li></li>
+                          <li><i class="glyphicon glyphicon-envelope lighter"></i><a href="#">&nbsp;Help</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">&nbsp;</div>
+              </div>
+            <div class="col-md-3">
+                <div class="row space-16">&nbsp;</div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="thumbnail">
+                      <div class="caption text-center" onclick="location.href='https://flow.microsoft.com/en-us/connectors/shared_slack/slack/'">
+                        <div class="position-relative">
+                          <img src="https://az818438.vo.msecnd.net/icons/slack.png" style="width:72px;height:72px;" />
+                        </div>
+                        <h4 id="thumbnail-label"><a href="https://flow.microsoft.com/en-us/connectors/shared_slack/slack/" target="_blank">Microsoft Slack</a></h4>
+                        <p><i class="glyphicon glyphicon-user light-red lighter bigger-120"></i>&nbsp;Auditor</p>
+                        <div class="thumbnail-description smaller">Slack is a team communication tool, that brings together all of your team communications in one place, instantly searchable and available wherever you go.</div>
+                      </div>
+                      <div class="caption card-footer text-center">
+                        <ul class="list-inline">
+                          <li><i class="people lighter"></i>&nbsp;7 Active Users</li>
+                          <li></li>
+                          <li><i class="glyphicon glyphicon-envelope lighter"></i><a href="#">&nbsp;Help</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">&nbsp;</div>
+            </div>
         </div>
-    </body>
-    <script type="text/javascript">
-         $('#home').click(function() {
-       
-        });
-    </script>
+
+        <!--footer-->
+        <div class="ct-footer-box-top ct-bg-color-seaside-blue">
+            <div class="row ct-padding-top-md ct-padding-left-xl">
+                <div class="col-md-1 ct-margin-right-minus-2">
+                    <span><i class="fas fa-user-circle ct-text-white fa-3x"></i></span>
+                </div>
+                <div class="col-md-11 ct-margin-top-sm">
+                    <span class="ct-text-white">Alfiani Syahruni Qotrunisa</span>
+                </div>
+                <div class="col-md-1 btn ct-footer-edit-profile">Edit Profile</div>
+                <div class="col-md-1"></div>
+                <div class="col-md-10"></div>
+            </div>
+        </div>
+        <div class="ct-bg-color-red">
+            <span>Copyright 2023 Astra international - Daihatsu All Right Reserverd</span>
+        </div>
+
+
+</body>
 </html>

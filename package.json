@@ -9,6 +9,6 @@
   },
   "scripts": {
     "compile:sass-bak": "node-sass -w report/stylesheet/scss/main.scss -o report/stylesheet",
-    "compile:sass" : "node-sass -w report-v2/stylesheet/scss/application/application.scss -o report-v2/stylesheet"
+    "compile:sass" : "node-sass -w report-v2/stylesheet/scss/application.scss -o report-v2/stylesheet"
   }
 }

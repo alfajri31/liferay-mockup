@@ -1,3 +1,5 @@
+$color-seaside-blue : #103c7c;
+
 .ct-padding-xs { padding: .25em; }
 .ct-padding-sm { padding: .5em; }
 .ct-padding-md { padding: 1em; }
@@ -182,14 +184,14 @@
  }
 
 .ct-navbar {
-    background-color:#103c7c;
+    background-color:$color-seaside-blue;
     color: white;
     height: 6/5rem;
     text-align: center;
     margin-bottom: 0px;
 }
 
-ul > li  {
+ul > li.ct-li  {
    display: inline-block;
    padding-top: 2rem !important;
    padding: 2rem;
@@ -202,13 +204,13 @@ ul > li  {
    }
 
    a:focus {
-      background-color:#043464;
+      background-color:$color-seaside-blue;
    }
 
    a:focus::after {
       content:"";
       display: block;
-      background-color:#043464;
+      background-color:$color-seaside-blue;
       padding: 3rem;
       position: absolute;
       left: 0;
@@ -219,14 +221,14 @@ ul > li  {
 
    a::after {
       margin-top: 200px;
-      padding: rem;
+      padding: 1rem;
       background-color: red;
    }
    
 }
 .side-blue-navbar {
    padding: 3rem;
-   background-color: #043464;
+   background-color: $color-seaside-blue;
 }
 .side-white-navbar {
    padding: 3rem;
@@ -247,6 +249,11 @@ ul > li  {
 
 .ct-inline-block {
    display: inline-block;
+   width: 100px;
+   height: 100px;
+   padding: 5px;
+   border: 1px solid blue;    
+   background-color: yellow; 
 }
 
 .ct-transform-x-50{
@@ -282,4 +289,71 @@ ul > li  {
    padding-left: 2rem;
    opacity: 100;
 }
+
+.ct-color-seaside-blue {
+   color: $color-seaside-blue;
+}
+
+.ct-bg-color-seaside-blue {
+   background-color: $color-seaside-blue;
+}
+
+.ct-bg-color-red {
+   background-color: red;
+}
+
+.ct-bg-color-white {
+   background-color: white;
+}
+
+.ct-font-weight-200 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.thumbnail {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+   transition: 0.3s;
+   min-width: 40%;
+   border-radius: 5px;
+ }
+
+ .thumbnail-description {
+   min-height: 40px;
+ }
+
+ .thumbnail:hover {
+   cursor: pointer;
+   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+ }
+
+ .ct-footer-box-top {
+   height: 14rem;
+ }
+ 
+ .stroke-white {
+  -webkit-text-stroke: 1px #000;
+  -webkit-text-fill-color: white;
+ }
+
+ .stroke-transparent {
+   -webkit-text-stroke: 1px #000;
+   -webkit-text-fill-color: transparent;
+  }
+
+  .ct-margin-right-minus-2 {
+      margin-right:-2rem;
+  }
+
+  .ct-footer-edit-profile {
+   background-color: aquamarine;
+   margin-left: 1rem;
+   padding: 5rem;
+  }
+
+  .ct-padding-0 {
+   padding-left: 0;
+   padding-right: 0;
+  }
+
 
