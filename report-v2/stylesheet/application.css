@@ -412,13 +412,24 @@ ul > li.ct-li {
   margin-right: -2rem; }
 
 .ct-footer-edit-profile {
-  background-color: aquamarine;
-  margin-left: 1rem;
-  padding: 5rem; }
+  background-color: aquamarine; }
 
 .ct-padding-0 {
   padding-left: 0;
   padding-right: 0; }
+
+.ct-button {
+  font-size: 1.4rem;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  position: relative;
+  width: 100px;
+  transition: all 0.5s ease-in-out; }
+
+.color-aquamarine {
+  background-color: aquamarine; }
 
 .ct-carousel {
   margin-left: 0%;

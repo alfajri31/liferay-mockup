@@ -1,5 +1,6 @@
 $color-side-navbar : #043464;
 $color-navbar : #103c7c;
+$color-aquamarine : aquamarine;
 
 .ct-padding-xs { padding: .25em; }
 .ct-padding-sm { padding: .5em; }
@@ -343,8 +344,7 @@ ul > li.ct-li  {
 
  .ct-footer-edit-profile {
   background-color: aquamarine;
-  margin-left: 1rem;
-  padding: 5rem;
+
  }
 
  .ct-padding-0 {
@@ -352,3 +352,17 @@ ul > li.ct-li  {
   padding-right: 0;
  }
 
+.ct-button {
+  font-size: 1.4rem;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  position: relative;
+  width: 100px;
+  transition: all 0.5s ease-in-out;
+}
+
+.color-aquamarine {
+  background-color: $color-aquamarine;
+}
