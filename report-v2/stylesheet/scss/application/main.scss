@@ -1,13 +1,16 @@
 $color-side-navbar : #043464;
 $color-navbar : #103c7c;
 $color-aquamarine : aquamarine;
+/**
+** key dont be focus for every pixel but for every device
+**/
 $media-sm : 540px;
 $media-md : 720px;
 $media-lg : 992px;
 $media-xl : 1140px;
 $media-desktop: 1023px;
-$media-tab : 768px; //center
-$media-mobile : 767px;
+$media-tab : 750px; //center
+$media-mobile : 300px;
 
 .ct-padding-xs { padding: .25em; }
 .ct-padding-sm { padding: .5em; }
@@ -250,6 +253,7 @@ $media-mobile : 767px;
 }
 
 @media only screen and (min-width: $media-tab) and (max-width: $media-desktop) {
+
   .ct-navbar {
     background-color:$color-navbar;
     color: white;
@@ -438,3 +442,4 @@ $media-mobile : 767px;
 .color-aquamarine {
   background-color: $color-aquamarine;
 }
+
