@@ -1,6 +1,8 @@
 $color-side-navbar : #043464;
 $color-navbar : #103c7c;
 $color-aquamarine : aquamarine;
+$default-font-size : 1.2rem;
+$default-font-header : 3rem;
 /**
 ** key dont be focus for every pixel but for every device
 **/
@@ -10,7 +12,7 @@ $media-lg : 992px;
 $media-xl : 1140px;
 $media-desktop: 1023px;
 $media-tab : 750px; //center
-$media-mobile : 300px;
+$media-mobile : 280px;
 
 .ct-padding-xs { padding: .25em; }
 .ct-padding-sm { padding: .5em; }
@@ -96,10 +98,6 @@ $media-mobile : 300px;
 .ct-margin-left-lg { margin-left: 1.5em; }
 .ct-margin-left-xl { margin-left: 3em; }
 
-.ct-d-flex {
-  display: flex;
-}
-
 .ct-d-flex-column{
   flex-direction: column;
 }
@@ -151,7 +149,7 @@ $media-mobile : 300px;
 }
 
 .label-size {
-  font-size: 1.2rem;
+  font-size: $default-font-size;
 }
 
 .content-is-empty-need-span {
@@ -191,23 +189,31 @@ $media-mobile : 300px;
 .ct-text-white {
   &__size {
     color: white;
-    font-size: 1.3rem;
+    font-size: $default-font-size;
   }
 }
 
 
 @media only screen and (min-width: $media-desktop) {
+
+  .btn {
+    display: none !important;
+  }
+  .collapse {
+    display: block !important;
+  }
+
   .ct-navbar {
     background-color:$color-navbar;
     color: white;
     height: 6/5rem;
     text-align: center;
     margin-bottom: 0px;
-    padding-bottom: 0.2rem;
+    padding-bottom: 1rem;
   }
   
   ul > li.ct-li  {
-    font-size: 1.5rem;
+    font-size: $default-font-size;
     display: inline-block;
     padding-top: 2rem !important;
     padding: 1rem;
@@ -254,16 +260,24 @@ $media-mobile : 300px;
 
 @media only screen and (min-width: $media-tab) and (max-width: $media-desktop) {
 
+  .btn {
+    display: none !important;
+  }
+  .collapse {
+    display: block !important;
+  }
+  
   .ct-navbar {
     background-color:$color-navbar;
     color: white;
     height: 6/5rem;
     text-align: center;
+    padding-bottom: 1rem;
     margin-bottom: 0px;
   }
   
   ul > li.ct-li  {
-    font-size: 1.5rem;
+    font-size: $default-font-size;
     display: inline-block;
     padding-top: 2rem !important;
     padding: 1rem;
@@ -310,7 +324,36 @@ $media-mobile : 300px;
 }
 
 @media only screen and (min-width: $media-mobile) and (max-width: $media-tab) {
+    
+    .btn {
+      border-radius: 0% !important;
+    }
 
+    .ct-mobile-nav {
+      text-align: right !important;
+      background-color: $color-navbar;
+      width: 100%;
+    }
+  
+    .ct-navbar {
+      background-color: $color-navbar;
+      content:"dsadsadsa";
+    }
+  
+    ul > li.ct-li {
+      list-style-type: none;
+      display: block; //change by jquery modify
+      text-align: center;
+      padding :1rem;
+      a {
+        color: white;
+      }
+  
+      i {
+        display: none;
+      }
+  
+    }
 }
 
 .ct-text-center {
@@ -391,7 +434,7 @@ $media-mobile : 300px;
 }
 
 .ct-font-weight-200 {
- font-size: 3rem;
+ font-size: $default-font-header;
  font-weight: bold;
 }
 
@@ -401,7 +444,8 @@ $media-mobile : 300px;
 }
 
 .ct-footer-box-top {
-  height: 14rem;
+  height: 15rem;
+  font-size: $default-font-size;
 }
 
 .stroke-white {
@@ -414,9 +458,25 @@ $media-mobile : 300px;
   -webkit-text-fill-color: transparent;
  }
 
- .ct-margin-right-minus-2 {
+ .ct-margin-right-minus-sm {
      margin-right:-2rem;
  }
+
+ .ct-margin-right-minus-md {
+  margin-right:-4rem;
+}
+
+.ct-margin-left-minus-sm {
+  margin-left:-2rem;
+}
+
+.ct-margin-left-minus-md {
+  margin-left:-4rem;
+}
+
+ .ct-margin-right-minus-2 {
+  margin-right:-2rem;
+}
 
  .ct-footer-edit-profile {
   background-color: aquamarine;
@@ -429,17 +489,194 @@ $media-mobile : 300px;
  }
 
 .ct-button {
-  font-size: 1.4rem;
-  border: 1px solid black;
+  position: absolute;
+  right : 1rem;
+  max-width: 100%;
+  background-color: black;
+  width: fit-content;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: whitesmoke;
+  padding: 0.5rem;
+  border: 1px;
   outline: none;
   border-radius: 0.35rem;
   cursor: pointer;
   position: relative;
-  width: 100px;
   transition: all 0.5s ease-in-out;
+  margin: 1rem;
+  font-family: Arial;
 }
 
 .color-aquamarine {
   background-color: $color-aquamarine;
 }
 
+/**vendor carousel**/
+.ct-carousel {
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+ul.ct-slides {
+  display: block;
+  position: relative;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.ct-slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+ul.ct-slides input {
+  display: none; 
+}
+
+
+.ct-slide-container { 
+  display: block; 
+}
+
+.ct-slide-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  opacity: 0;
+  transition: all .7s ease-in-out;
+}   
+
+.ct-slide-image img {
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+}
+
+.ct-carousel-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: $default-font-size;
+  line-height: 450px;
+  color: #fff;
+}
+
+.ct-carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.ct-slide-image:hover + .ct-carousel-controls label{
+  opacity: 0.5;
+}
+
+.ct-carousel-controls label:hover {
+  opacity: 1;
+}
+
+.ct-carousel-controls .ct-prev-slide {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.ct-carousel-controls .ct-next-slide {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.ct-carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.ct-carousel-dots .ct-carousel-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+input:checked + .ct-slide-container .ct-slide-image {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .ct-slide-container .ct-carousel-controls label {
+   display: block; 
+}
+
+input#img-1:checked ~ .ct-carousel-dots label#img-dot-1,
+input#img-2:checked ~ .ct-carousel-dots label#img-dot-2,
+input#img-3:checked ~ .ct-carousel-dots label#img-dot-3,
+input#img-4:checked ~ .ct-carousel-dots label#img-dot-4,
+input#img-5:checked ~ .ct-carousel-dots label#img-dot-5,
+input#img-6:checked ~ .ct-carousel-dots label#img-dot-6 {
+opacity: 1;
+}
+
+
+input:checked + .ct-slide-container .ct-nav label { display: block; }
+
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+  
+  .carousel-inner .carousel-item-right.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(33.333%);
+  }
+  
+  .carousel-inner .carousel-item-left.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-33.333%);
+  }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+transform: translateX(0);
+}
+/**end**/
+
+.ct-default-font-size {
+  font-size: $default-font-size;
+}

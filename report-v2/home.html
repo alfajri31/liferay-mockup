@@ -10,7 +10,6 @@
             integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
             crossorigin="anonymous">
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -494,16 +493,17 @@
 </head>
 <body>
     <div id="wrapper">
+        <!--navbar-->
         <header class="container-fluid" id="banner" role="banner">
             <div class="cx-head">
                 <div class="col-sm-3">
                     <div class="head-left">
                             <img src="${images_folder}/logo_dewa.png" alt="${logo_description}" class="img-rounded" style="margin-top: 10px;height:40px;width: auto;">
-                            <button aria-controls="navigation" aria-expanded="false" class="collapsed navbar-toggle mob-ico-pos" data-target="#navigationCollapse" data-toggle="collapse" type="button">
+                            <!-- <button aria-controls="navigation" aria-expanded="false" class="collapsed navbar-toggle mob-ico-pos" data-target="#navigationCollapse" data-toggle="collapse" type="button">
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
-                            </button>
+                            </button> -->
                     </div>
                 </div>
                 <div class="col-sm-9 text-right cxrus-iconic">
@@ -522,18 +522,19 @@
                 </div>
             </div>
 
-            <div>
-                <ul class="ct-navbar col-sm-12">
-                        <li class="ct-li"><a class="ct-list-item" href="#" id="home">Home<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>  
-                        <li class="ct-li"><a class="ct-list-item" href="#" id="report">Report<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
-                        <li class="ct-li"><a class="ct-list-item" href="#" id="download">Download<i class="fa-solid fa-chevron-down ct-margin-left-sm" style="color: white;"></i></a></li>
-                        <li class="ct-li"><a class="ct-list-item" href="#" id="upload">Upload<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
-                        <li class="ct-li"><a class="ct-list-item" href="#" id="training">Training<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
-                        <li class="ct-li"><a class="ct-list-item" href="#" id="event">Calendar Event<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
-                </ul> 
-            </div>  
+            <div type="button" class="btn ct-mobile-nav" data-toggle="collapse" data-target="#demo">
+                <i class="fa fa-bars fa-2x ct-text-white" aria-hidden="true"></i></div>
+            <ul class="ct-navbar col-sm-12 collapse" id="demo">
+                <li class="ct-li"><a class="ct-list-item" href="#" id="home">Home<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>  
+                <li class="ct-li"><a class="ct-list-item" href="#" id="report">Report<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
+                <li class="ct-li"><a class="ct-list-item" href="#" id="download">Download<i class="fa-solid fa-chevron-down ct-margin-left-sm" style="color: white;"></i></a></li>
+                <li class="ct-li"><a class="ct-list-item" href="#" id="upload">Upload<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
+                <li class="ct-li"><a class="ct-list-item" href="#" id="training">Training<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
+                <li class="ct-li"><a class="ct-list-item" href="#" id="event">Calendar Event<i class="fa-solid fa-chevron-down ct-padding-left-sm" style="color: white;"></i></a></li>
+            </ul> 
             <!-- <div class="side-blue-navbar">test</div>   -->
         </header>
+        <!--end navbar-->
 
         <!-- carousel -->
         <div class="container-fluid">
@@ -542,7 +543,7 @@
                 <input type="radio" name="radio-buttons" id="img-1" checked />
                 <li class="ct-slide-container">
                   <div class="ct-slide-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Timisoara_-_Regional_Business_Centre.jpg" width="100">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Timisoara_-_Regional_Business_Centre.jpg">
                   </div>
                   <div class="ct-carousel-controls">
                     <label for="img-3" class="ct-prev-slide">
@@ -593,6 +594,7 @@
 
         <!-- Agenda -->
         <h1 class="ct-text-center ct-color-seaside-blue ct-font-weight-200">Agenda</h1>
+           <!--end eagenda-->
 
         <!--event-->
         <div class="row container-fluid">
@@ -697,25 +699,32 @@
                 <div class="col-md-2">&nbsp;</div>
             </div>
         </div>
+        <!--end event-->
 
         <!--footer-->
         <div class="container-fluid">
             <div class="ct-footer-box-top ct-bg-color-seaside-blue">
                 <div class="row ct-padding-top-md ct-padding-left-xl">
-                    <div class="col-md-1 ct-margin-right-minus-2">
+                    <div class="col-md-1 ct-margin-right-minus-sm ct-margin-top-md">
                         <span><i class="fas fa-user-circle ct-text-white fa-3x"></i></span>
                     </div>
                     <div class="col-md-11 ct-margin-top-sm">
                         <span class="ct-text-white">Alfiani Syahruni Qotrunisa</span>
                     </div>
-                    <button class="col-md-1 ct-button color-aquamarine ct-padding-right-sm ct-margin-left-md">Edit Profile</button>
-                    <div class="col-md-1"></div>
-                    <div class="col-md-10"></div>
+                    <div class="col-md-11">
+                        <div class="ct-button">Edit Profile</div>
+                    </div>
                 </div>
             </div>
-            <div class="ct-bg-color-red">
-                <span>Copyright 2023 Astra international - Daihatsu All Right Reserverd</span>
+            <div class="ct-bg-color-red ct-text-white ct-padding-xs ct-text-center">
+                <span class="ct-default-font-size">@Copyright 2023 Astra international - Daihatsu All Right Reserverd</span>
             </div>
         </div>
+        <!--end footer-->
+    </div>
 </body>
+
+<script type="text/javascript">
+
+</script>
 </html>
